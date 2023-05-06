@@ -18,7 +18,7 @@ PLAYER_SIZE = (20, 20)
 
 main_display = pygame.display.set_mode((WIDTH, HEIGHT))
 
-player = pygame.image.load('./img/player.png').convert_alpha() #pygame.Surface(PLAYER_SIZE)
+player = pygame.image.load('player.png').convert_alpha() #pygame.Surface(PLAYER_SIZE)
 
 player_rect = pygame.Rect(55, 45, *PLAYER_SIZE)
 score = 0
@@ -30,7 +30,7 @@ bg_move = 3
 
 def create_enemy():
     ENEMY_SIZE = (50, 40)
-    enemy = pygame.image.load('./img/enemy.png').convert_alpha()
+    enemy = pygame.image.load('enemy.png').convert_alpha()
     enemy_rect = pygame.Rect(WIDTH, random.randint(70, 500), *ENEMY_SIZE)
     enemy_move = [random.randint(-8, -4), 0]
     return  [enemy, enemy_rect, enemy_move ]
@@ -42,7 +42,7 @@ enemies = []
 
 def create_bonuses():
     BONUSES_SIZE = (35, 55)
-    bonus = pygame.image.load('./img/bonus.png').convert_alpha()
+    bonus = pygame.image.load('bonus.png').convert_alpha()
     
     bonus_rect = pygame.Rect(random.randint(40, 900), 0,  *BONUSES_SIZE)
     bonus_move = [0, random.randint(4, 8)]
